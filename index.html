@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome, Oloruntobi</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script
+      src="https://kit.fontawesome.com/c71812c7a0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="/img/logo.JPG" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Frontend Engineer</p>
+          <h1>
+            Hi, I am <span>Oloruntobi</span>,<br />a budding software Engineer
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- adding about -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about1">
+            <img src="/img/about.jpg" alt="me" />
+          </div>
+          <div class="about2">
+            <h1 class="sub-about">About me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              veniam eligendi consequatur amet deserunt, nesciunt ex inventore
+              nemo sunt blanditiis doloremque, facere necessitatibus quaerat
+              harum labore provident facilis, natus vero.
+            </p>
+            <div class="tab">
+              <p class="tab-links active" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Web Development</span><br />
+                  SQL<br />
+                  Python <br />HTML5 <br />CSS <br />JavaScript <br />Typescript
+                  <br />JQuery
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Feb 2022 - April 2023</span><br />
+                  Software Engineer at Forthwith Global
+                </li>
+                <li>
+                  <span>April 2020 - Jan 2021</span><br />
+                  Analytical Intership with Hash Analytics<br />
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>Nov 2015 - Nov 2021</span><br />
+                  Federal University of Technology, Akure
+                </li>
+                <li>
+                  <span>April 2008 - Jun 2014</span><br />
+                  St. Graags College<br />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- adding services -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-about">Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-sharp fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+              illum sapiente, minima sunt?
+            </p>
+            <a href="#">Explore</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-users"></i>
+            <h2>User Experience</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+              illum sapiente, minima sunt?
+            </p>
+            <a href="#">Explore</a>
+          </div>
+          <div>
+            <i class="fab fa-app-store"></i>
+            <h2>Responsive Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+              illum sapiente, minima sunt?
+            </p>
+            <a href="#">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- adding pictures instead of portfolio -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-about">My Pictures</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="/img/family.jpg" alt="family" />
+            <div class="layer">
+              <h2>Family Time</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                illum sapiente, minima sunt?
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="/img/IMG-1725.jpg" alt="skinny" />
+            <div class="layer">
+              <h2>Skinny Man</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                illum sapiente, minima sunt?
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="/img/IMG-1514.JPG" alt="bnw" />
+            <div class="layer">
+              <h2>Black and White</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                illum sapiente, minima sunt?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
